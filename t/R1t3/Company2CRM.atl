@@ -13,7 +13,19 @@ rule Company2CRM{
 		groups<- s.lines
 	)
 }
-rule Person2Worker{
+rule Employee2Worker{
+	from s: Company!Employee
+	to t: CRM!Account(
+	username <- s.firstname+'.'+s.lastname	,
+	group<-s.employed
+	),
+	t1: CRM!Worker(
+	account<-t,
+	name <- s.firstname+' '+s.lastname
+	
+	)
+}
+rule Client2Worker{
 	from s: Company!Client
 	to t: CRM!Account(
 	username <- s.firstname+'.'+s.lastname	,
