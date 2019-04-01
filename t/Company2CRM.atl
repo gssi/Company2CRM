@@ -3,7 +3,6 @@
 
 module Company2CRM;
 create OUT : CRM from IN : Company;
-
 rule Company2CRM{
 	from s: Company!Company
 	to t: CRM!CRM(
