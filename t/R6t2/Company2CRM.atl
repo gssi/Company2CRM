@@ -41,7 +41,7 @@ rule European2Project{
 	from s: Company!European
 	to t: CRM!Project(
 		name<-s.name,
-		area<- s.related.name,
+		area<- s.related.category.name,
 		budget<-s.budget
 	)
 }
@@ -50,7 +50,7 @@ rule National2Project{
 	from s: Company!National
 	to t: CRM!Project(
 		name<-s.name,
-		area<- s.related.name
+		area<- s.related.category.name
 	)
 }
 rule Unit2Group{
