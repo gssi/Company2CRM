@@ -7,17 +7,17 @@
   <company name="IBM"
       address="//@address.0">
     <persons
-        fullName="Iovino"
+        fullName=". Iovino"
         position="employee"
         assignedTo="//@company.0/@projects.1"
         employed="//@company.0/@lines.1"/>
     <persons
-        fullName="Basciani"
+        fullName=". Basciani"
         position="employee"
         assignedTo="//@company.0/@projects.0"
         employed="//@company.0/@lines.1"/>
     <persons
-        fullName="Di Ruscio"/>
+        fullName="_ Di Ruscio"/>
     <projects
         xsi:type="company:European"
         name="BIRDS"
